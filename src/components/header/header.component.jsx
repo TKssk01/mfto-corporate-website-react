@@ -53,14 +53,14 @@ const Header = () => {
           <div className="first">
             <PhoneInTalkOutlinedIcon />
             <div className="nos">
-              <span>+81 08055041995</span>
+              <span>+1 8579998427</span>
               <p>24 x 7 Helpline</p>
             </div>
           </div>
         </div>
       </div>
       <div className="navigation">
-        
+
         <span className="options">
           <span className="active"></span>
           <Link to="/">home</Link>
