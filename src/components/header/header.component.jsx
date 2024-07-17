@@ -53,7 +53,7 @@ const Header = () => {
           <div className="first">
             <PhoneInTalkOutlinedIcon />
             <div className="nos">
-              <span>+91 2309219765</span>
+              <span>+81 08055041995</span>
               <p>24 x 7 Helpline</p>
             </div>
           </div>
@@ -76,23 +76,23 @@ const Header = () => {
           <p>Our services</p>
         </span>
 
-        <span className="options">
+        {/* <span className="options">
           <span className="active"></span>
           <Link to="/events">events</Link>
           <p>Functions</p>
-        </span>
+        </span> */}
 
-        <span className="options">
+        {/* <span className="options">
           <span className="active"></span>
           <Link to="/partners">partners</Link>
           <p>Our Associates</p>
-        </span>
+        </span> */}
 
-        <span className="options">
+        {/* <span className="options">
           <span className="active"></span>
           <Link to="/blogs">blogs</Link>
           <p>Get a quotation</p>
-        </span>
+        </span> */}
 
         <span className="options">
           <span className="active"></span>

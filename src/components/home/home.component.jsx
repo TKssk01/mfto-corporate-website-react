@@ -5,11 +5,11 @@ import "./home.styles.scss";
 const Home = () => {
   return (
     <div className="home">
-      <h1 className="heading">Ready for a smart future!</h1>
+      <h1 className="heading">Ready for a smart financial future!</h1>
       <p className="para">
-        Stay focused on creating engaging content experiences and impress
-        visitors with thoughtful usability, making their job (answering their
-        question) easier. — Duane Forrester
+        Empowering investors with cutting-edge algorithms and thoughtful 
+        user experience. We make intelligent trading accessible, 
+        turning complex data into actionable insights.
       </p>
       <button>
         <p>Know more!</p>
