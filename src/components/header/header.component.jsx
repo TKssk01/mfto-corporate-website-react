@@ -60,16 +60,19 @@ const Header = () => {
         </div>
       </div>
       <div className="navigation">
+        
         <span className="options">
           <span className="active"></span>
           <Link to="/">home</Link>
           <p>Main page</p>
         </span>
+
         <span className="options">
           <span className="active"></span>
           <Link to="/about">Corporate</Link>
           <p>About us</p>
         </span>
+
         <span className="options">
           <span className="active"></span>
           <Link to="/services">We offer</Link>
