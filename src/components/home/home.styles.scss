@@ -30,14 +30,14 @@
   .reveal-text {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 1.0s ease, transform 1.0s ease;
   
     &.active {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   .para {
     width: 60%;
     transform: translateX(200px);

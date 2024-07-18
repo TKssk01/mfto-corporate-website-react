@@ -46,7 +46,7 @@ const Header = () => {
           </div>
           <div className="content">
             <h1>MFTO</h1>
-            <p>Always better</p>
+            <p>Corporation</p>
           </div>
         </div>
         <div className="contact-us">

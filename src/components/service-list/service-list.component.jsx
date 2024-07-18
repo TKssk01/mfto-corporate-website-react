@@ -23,35 +23,35 @@ const ServiceList = () => {
       <div ref={upper} className="upper">
         <div onClick={cardListItemClicke} className="cards">
           <img src={Car} />
-          <h1>Vehicle</h1>
+          <h1>Finance</h1>
           <p>Ride where ever u want</p>
           <button>&gt;</button>
         </div>
 
         <div onClick={cardListItemClicke} className="cards">
           <img src={Airplane} />
-          <h1>Flight</h1>
+          <h1>Technology</h1>
           <p>Ride where ever u want</p>
           <button>&gt;</button>
         </div>
 
         <div onClick={cardListItemClicke} className="cards active-card">
           <img src={Rocket} />
-          <h1>Space Agency</h1>
+          <h1>Investment</h1>
           <p>Ride where ever u want</p>
           <button>&gt;</button>
         </div>
 
         <div className="cards" onClick={cardListItemClicke}>
           <img src={Balloons} />
-          <h1>Decoration</h1>
+          <h1>Trading</h1>
           <p>Ride where ever u want</p>
           <button>&gt;</button>
         </div>
 
         <div className="cards" onClick={cardListItemClicke}>
           <img src={Building} />
-          <h1>Construction</h1>
+          <h1>Analytics</h1>
           <p>Ride where ever u want</p>
           <button>&gt;</button>
         </div>
