@@ -25,7 +25,7 @@ const KnowUs = () => (
     </div>
     <div className="paragraph">
       <p>
-        MFTO.Inc is an innovative startup company that develops and operates 
+        MFTO, Inc. is an innovative startup company that develops and operates 
         system trading methods using proprietary algorithms, combining cutting-edge 
         financial engineering with advanced technology. Our mission is to provide 
         investors with optimized trading strategies, maximizing the efficiency 
@@ -36,7 +36,7 @@ const KnowUs = () => (
         at our disposal, and our vision is to tackle the complexity of financial markets
          - our area of expertise - and pave the way for the future of investment through 
         the power of technology. With its headquarters in Japan and an office in Boston, 
-        MFTO.Inc provides innovative solutions to investors operating in global financial markets.
+        MFTO, Inc. provides innovative solutions to investors operating in global financial markets.
       </p>
     </div>
   </div>
