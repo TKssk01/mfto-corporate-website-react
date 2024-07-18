@@ -12,8 +12,17 @@
   padding-left: 20px;
   transition: 0.5s all;
   animation: 1s fade-in linear forwards;
-  background-color: rgba(53, 50, 223, 0.04);
+  background-color: rgba(0, 71, 171, 0.8);
   @keyframes fade-in {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
     100% {
       opacity: 1;
     }

@@ -16,13 +16,54 @@ body {
   min-height: 100vh;
 }
 
-.upper-section {
+/* .upper-section {
   background: black;
-  background-image: url(./assets/images/background-new.jpg);
+  background-image: url(./assets/videos/background-1.mp4);
   background-position: center center;
   background-size: cover;
   object-fit: cover;
   min-height: 100vh;
+  position: relative;
+} */
+
+.upper-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* 黒い半透明オーバーレイ */
+  z-index: 1;
+}
+
+.upper-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.0); /* ビデオ自体も少し暗く */
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* オーバーレイの上にコンテンツを表示 */
+  color: white; /* テキストを白に */
+}
+
+/* HeaderとHomeコンポーネントのスタイルを必要に応じて調整 */
+.content > * {
   position: relative;
 }
 

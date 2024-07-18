@@ -11,9 +11,9 @@ const Home = () => {
         user experience. We make intelligent trading accessible, 
         turning complex data into actionable insights.
       </p>
-      <button>
+      {/* <button>
         <p>Know more!</p>
-      </button>
+      </button> */}
     </div>
   );
 };
