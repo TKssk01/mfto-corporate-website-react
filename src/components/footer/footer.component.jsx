@@ -18,20 +18,14 @@ const Footer = () => (
   <div className="footer">
     <div className="part1">
       <div className="about-web">
-        <h1>Logo</h1>
+        <h1>MFTO</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
           veritatis iste dolores at assumenda reprehenderit nesciunt consectetur
         </p>
         <div className="social-media-links">
           <div className="icons">
-            <FacebookIcon />
-          </div>
-          <div className="icons">
             <TwitterIcon />
-          </div>
-          <div className="icons">
-            <InstagramIcon />
           </div>
           <div className="icons">
             <LinkedInIcon />
