@@ -1,14 +1,16 @@
-import Car from "../assets/images/car.png";
+// import Car from "../assets/images/car.png";
+import FinanceDollar from "../assets/images/finance-dollar.png";
 import Airplane from "../assets/images/airplane.png";
 import Balloons from "../assets/images/balloons.png";
 import Building from "../assets/images/building.png";
 import Rocket from "../assets/images/rocket.png";
 
+
 export const serviceData = [
   {
     id: 1,
-    icon: Car,
-    title: "Vehicles",
+    icon: FinanceDollar,
+    title: "Finance",
     about:
       "Lorem ipsum dolor, sit amet consectetur adipisicing el ducimus quibusdam a omnis, architecto saepe officia neque corporis fuga quaerat ratione.",
   },

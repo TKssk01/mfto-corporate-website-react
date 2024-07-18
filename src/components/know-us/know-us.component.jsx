@@ -25,18 +25,18 @@ const KnowUs = () => (
     </div>
     <div className="paragraph">
       <p>
-        accusantium optio doloribus mollitia perferendis fugit rem explicabo,
-        culpa modi animit, quos, inventore nam temporibus quidem accusamus quo
-        modi reprehenderit voluptates distinctio? Aut quibusdam quidem numquam
-        totam architecto ab officia vel rerum minima sed rem omnis adipisci
-        perspiciatis voluptas excepturi ipsam nesciunt, nisi inventore provident
-        voluptatum minus aspernatur cupiditate delectus ex. Doloribus commodi,
-        ratione quibusdam cum quaerat repellat.
+        MFTO.Inc is an innovative startup company that develops and operates 
+        system trading methods using proprietary algorithms, combining cutting-edge 
+        financial engineering with advanced technology. Our mission is to provide 
+        investors with optimized trading strategies, maximizing the efficiency 
+        and profitability of their investments.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita
-        ea porro daliquid eligendi obcaecati reprehenderit quo deserunt!
-        Inventore beatae debitis, ipsam pariatur eum quisquam deserunt sint!
+        Our challenge is to solve latent problems in the world using every method 
+        at our disposal, and our vision is to tackle the complexity of financial markets
+         - our area of expertise - and pave the way for the future of investment through 
+        the power of technology. With its headquarters in Japan and an office in Boston, 
+        MFTO.Inc provides innovative solutions to investors operating in global financial markets.
       </p>
     </div>
   </div>

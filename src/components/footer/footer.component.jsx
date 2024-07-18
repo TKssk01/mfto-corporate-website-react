@@ -10,9 +10,9 @@ import "./footer.styles.scss";
 
 // import FacebookIcon from '@mui/icons-material/Facebook';
 // import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
+// import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+// import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => (
   <div className="footer">
@@ -24,9 +24,9 @@ const Footer = () => (
           veritatis iste dolores at assumenda reprehenderit nesciunt consectetur
         </p>
         <div className="social-media-links">
-          <div className="icons">
+          {/* <div className="icons">
             <TwitterIcon />
-          </div>
+          </div> */}
 
           <div className="icons">
             <a 
@@ -38,9 +38,9 @@ const Footer = () => (
             </a>
           </div>
  
-          <div className="icons">
+          {/* <div className="icons">
             <YouTubeIcon />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="services-list">

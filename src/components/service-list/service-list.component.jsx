@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 
-import Car from "./car.png";
+// import Car from "./car.png";
+import FinanceDollar from "./finance-dollar.png";
 import Airplane from "./airplane.png";
 import Rocket from "./rocket.png";
 import Balloons from "./balloons.png";
@@ -22,7 +23,7 @@ const ServiceList = () => {
     <div className="service-list">
       <div ref={upper} className="upper">
         <div onClick={cardListItemClicke} className="cards">
-          <img src={Car} />
+          <img src={FinanceDollar} />
           <h1>Finance</h1>
           <p>Ride where ever u want</p>
           <button>&gt;</button>
