@@ -8,8 +8,8 @@ import "./footer.styles.scss";
 // import LinkedInIcon from "@material-ui/icons/LinkedIn";
 // import YouTubeIcon from "@material-ui/icons/YouTube";
 
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -27,9 +27,17 @@ const Footer = () => (
           <div className="icons">
             <TwitterIcon />
           </div>
+
           <div className="icons">
-            <LinkedInIcon />
+            <a 
+              href="https://www.linkedin.com/company/mfto-inc" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
           </div>
+ 
           <div className="icons">
             <YouTubeIcon />
           </div>
