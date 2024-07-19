@@ -5,14 +5,14 @@ import "./articles.styles.scss";
 const Articles = () => (
   <div className="articles">
     <div className="founder">
-      <h1> A blog is only as interesting as the interest shown in others.</h1>
+      <h1> Innovation in fintech is driven by understanding market dynamics.</h1>
       <p>
-        The Internet makes money for you when you build something that is real
-        and when it matters to people!
+        In the world of algorithmic trading, success comes from blending 
+        cutting-edge technology with deep financial insights.
       </p>
-      <p>My rule of thumb is build a site for a user, not a spider.</p>
+      <p>Our goal is to create trading systems that adapt to the market, not just follow it.</p>
       <div className="about-founder">
-        <span>John Smith</span>
+        <span>Rei S</span>
         <p>Founder &amp; Diretor</p>
       </div>
     </div>
@@ -28,9 +28,9 @@ const Articles = () => (
         </div>
         <h1>WHO WE ARE</h1>
         <p>
-          It is essential that marketers dig deeper into search, social, local
-          mobile data to understand how they all work in tandem to impact
-          ranking
+          At MFTO.Inc, we combine advanced algorithms with financial expertise 
+          to pioneer innovative automated trading systems. Our team delivers 
+          cutting-edge market insights, revolutionizing fintech.
         </p>
         <button>&gt;</button>
       </div>
@@ -43,11 +43,11 @@ const Articles = () => (
           />
           <button>Read More</button>
         </div>
-        <h1>OUR RANKING</h1>
+        <h1>OUR APPROACH</h1>
         <p>
-          It is essential that marketers dig deeper into search, social, local
-          mobile data to understand how they all work in tandem to impact
-          ranking
+          Our advanced algorithms analyze real-time market data to optimize 
+          trading strategies, maximizing returns while effectively 
+          managing risk in dynamic markets.
         </p>
         <button>&gt;</button>
       </div>
