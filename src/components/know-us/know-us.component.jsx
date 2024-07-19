@@ -7,19 +7,19 @@ const KnowUs = () => (
       <div className="image image1">
         <img
           src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=890&q=80"
-          alt="3rd image"
+          alt="3rd"
         />
       </div>
       <div className="image image2">
         <img
           src="https://images.unsplash.com/photo-1526328828355-69b01701ca6a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=751&q=80"
-          alt="2nd image"
+          alt="2nd"
         />
       </div>
       <div className="image image3">
         <img
           src="https://images.unsplash.com/photo-1581404528764-2d2d2e39db02?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
-          alt="1st image"
+          alt="1st"
         />
       </div>
     </div>

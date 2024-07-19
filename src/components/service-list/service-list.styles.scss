@@ -19,6 +19,7 @@
     height: 160px;
     box-shadow: 0 0 20px rgba(133, 131, 131, 0.6);
     border-radius: 7px;
+    z-index: 10;
 
     .cards {
       width: 200px;
@@ -33,6 +34,8 @@
       transition: 1s all;
       animation: fade-in 1s linear forwards;
       user-select: none;
+      z-index: 10;
+      background-color: white;
 
       @keyframes fade-in {
         100% {
@@ -123,6 +126,7 @@
       justify-content: flex-start;
       padding-top: 25px;
       height: 185px;
+      z-index: 10;
 
       h1 {
         color: white;

@@ -1,35 +1,54 @@
 .home {
   font-family: 'Poppins', sans-serif;
-  height: 70vh;
+  min-height: 100vh;
   color: rgb(255, 255, 255);
   display: flex;
-  // justify-content: flex-start;
-  justify-content: center; /* flex-startからcenterに変更 */
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  // min-height: 100vh; /* 110vhから100vhに変更 */
-  // padding: 20vh 0; /* 上下にパディングを追加 */
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+
+  .content-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
 
   .heading,
   .para {
     opacity: 0;
     backdrop-filter: blur(1px);
+    width: 100%;
   }
 
   .heading {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    margin: 30px;
+    margin: 0 0 30px;
     animation: 0.6s heading-animation linear forwards;
     transform: translateY(150px);
-    margin-top: 140px;
     font-size: 3.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   }
 
   .reveal-text {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
     transition: opacity 1.0s ease, transform 1.0s ease;
   
     &.active {
@@ -39,21 +58,20 @@
   }
 
   .para {
-    width: 60%;
     transform: translateX(200px);
     animation: 1s para-animation linear forwards;
     animation-delay: 0.6s;
-    // line-height: 24px;
     text-align: center;
-    line-height: 30px;
+    line-height: 1.6;
     margin-bottom: 25px;
-    font-family: 'Poppins', sans-serif; // モダンなサンセリフフォント
-    font-weight: 300; // より軽いウェイトで洗練された印象に
-    font-size: 1.2rem; // サイズを少し大きく
-    line-height: 1.6; // 読みやすさを向上
-    letter-spacing: 0.5px; // 文字間隔を少し広げて
-    color: rgba(255, 255, 255, 0.9); // 白色を少し薄く
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); // わずかなシャドウ効果
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   button {
@@ -62,8 +80,8 @@
     outline: none;
     padding: 15px 7px;
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.01);
-    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 3;
     width: 200px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     font-weight: lighter;
@@ -74,37 +92,37 @@
     overflow: hidden;
     transition: all 0.3s ease;
     margin-top: 10px;
+    position: relative;
 
     &:hover::before,
     &:hover::after {
       width: 100%;
     }
 
-    &::before {
-      content: "";
-      background-color: rgb(42, 39, 219);
-
-      width: 0;
-      height: 3px;
-      position: absolute;
-      top: -0px;
-      left: 0;
-      transition: 0.8s all;
-    }
-
+    &::before,
     &::after {
       content: "";
       background-color: rgb(42, 39, 219);
       width: 0;
       height: 3px;
       position: absolute;
-      bottom: 0px;
-      right: 0;
       transition: 0.8s all;
     }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
+
     p {
       font-size: 15px;
       text-align: center;
+      margin: 0;
     }
   }
 
@@ -119,6 +137,46 @@
     100% {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .para {
+      font-size: 1rem;
+      max-width: 80%;
+    }
+
+    button {
+      width: 180px;
+      
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .para {
+      font-size: 0.9rem;
+      max-width: 90%;
+    }
+
+    button {
+      width: 160px;
+      
+      p {
+        font-size: 13px;
+      }
     }
   }
 }

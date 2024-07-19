@@ -1,4 +1,12 @@
 .header {
+  // background: red !important;
+  // opacity: 0.8 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 最大のz-index値 */
+  position: fixed;
   height: 140px;
   display: flex;
   justify-content: space-around;
@@ -7,17 +15,13 @@
   color: white;
   flex-direction: column;
   width: 100%;
-  position: relative;
+  // position: relative;
   padding-top: 20px;
   padding-left: 20px;
   transition: 0.5s all;
   animation: 1s fade-in linear forwards;
   background-color: rgba(0, 71, 171, 0.8);
-  @keyframes fade-in {
-    100% {
-      opacity: 1;
-    }
-  }
+  z-index: 1000; // 高いz-indexを設定
 
   @keyframes fade-in {
     0% {
@@ -32,7 +36,7 @@
     span {
       height: 45px;
       width: 45px;
-      background-color: red;
+      background-color:#3f03d1;
       display: block;
       border-radius: 50%;
       position: fixed;
@@ -150,20 +154,10 @@
           background: blue;
           width: 100%;
         }
-
-        // &::before {
-        //   right: 20px;
-        // }
       }
       &:last-child {
         align-items: flex-end;
       }
-
-      // &:nth-last-child(2) {
-      //   &::before {
-      //     right: -20px;
-      //   }
-      // }
 
       &::before {
         content: "";
@@ -195,15 +189,76 @@
       }
     }
   }
+
+  &.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 71, 171, 0.8);
+  }
+
+  @media (max-width: 1023px) {
+    height: auto;
+    padding: 10px 20px;
+
+    .upper {
+      width: 100%;
+      justify-content: space-between;
+
+      .contact-us {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+        cursor: pointer;
+
+        .MuiSvgIcon-root {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .mobile-navigation {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+
+      .options {
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        &:first-child {
+          border-top: none;
+        }
+
+        a {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 
 .scrolled {
+
   background-color: rgb(37, 37, 173);
   position: fixed;
-  z-index: 100000;
+  z-index: 1000;
   transition: 1s all;
   flex-direction: row;
-  height: 80px;
+  height: 100px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   opacity: 0;
@@ -275,6 +330,27 @@
         opacity: 0.8;
         font-size: 10px;
       }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    // position: static;
+    height: auto;
+    background-color: rgba(0, 71, 171, 0.8);
+    box-shadow: none;
+    border-bottom: none;
+    flex-direction: column;
+
+    .upper {
+      width: 100%;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .mobile-navigation {
+      display: flex;
     }
   }
 }

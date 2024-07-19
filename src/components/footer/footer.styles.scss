@@ -53,7 +53,8 @@
           }
 
           .MuiSvgIcon-root {
-            color: rgb(245, 84, 10);
+            // color: rgb(245, 84, 10);
+            color: white;
           }
         }
       }
@@ -110,7 +111,7 @@
           position: relative;
           width: 100%;
           background: white;
-          z-index: 10;
+          z-index: 3;
           border: 0;
           border-radius: 10px 0 0 10px;
         }

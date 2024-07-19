@@ -33,7 +33,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2); /* 黒い半透明オーバーレイ */
+  /* background: rgba(0, 0, 0, 0); 黒い半透明オーバーレイ */
   z-index: 1;
 }
 
@@ -41,6 +41,7 @@ body {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  z-index: 10;
 }
 
 .video-background {
@@ -51,7 +52,7 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(1.0); /* ビデオ自体も少し暗く */
-  z-index: 0;
+  z-index: 1;
 }
 
 .content {

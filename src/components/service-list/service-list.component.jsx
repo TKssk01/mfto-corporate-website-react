@@ -28,35 +28,35 @@ const ServiceList = () => {
     <div className="service-list">
       <div ref={upper} className="upper">
         <div onClick={cardListItemClicke} className="cards">
-          <img src={FinanceDollar} />
+          <img src={FinanceDollar} alt="financedollar" />
           <h1>Finance</h1>
           <p>Optimize your financial strategy</p>
           <button>&gt;</button>
         </div>
 
         <div onClick={cardListItemClicke} className="cards">
-          <img src={Technology} />
+          <img src={Technology} alt="technology" />
           <h1>Technology</h1>
           <p>Leverage cutting-edge solutions</p>
           <button>&gt;</button>
         </div>
 
         <div onClick={cardListItemClicke} className="cards active-card">
-          <img src={Investment} />
+          <img src={Investment} alt="investment" />
           <h1>Investment</h1>
           <p>Maximize your portfolio returns</p>
           <button>&gt;</button>
         </div>
 
         <div className="cards" onClick={cardListItemClicke}>
-          <img src={Trading} />
+          <img src={Trading} alt="trading" />
           <h1>Trading</h1>
           <p>Execute with precision and speed</p>
           <button>&gt;</button>
         </div>
 
         <div className="cards" onClick={cardListItemClicke}>
-          <img src={Analytics} />
+          <img src={Analytics} alt="analytics" />
           <h1>Analytics</h1>
           <p>Gain insights from market data</p>
           <button>&gt;</button>
