@@ -17,7 +17,7 @@ class Services extends React.Component {
 
     return (
       <div className="services">
-        <h1>Our Services</h1>
+        <h1>Our Service Features</h1>
         <div className="services-container">
           {services.map((service) => (
             <ServiceCard id={service.id} {...service} />
