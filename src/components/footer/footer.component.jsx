@@ -20,8 +20,9 @@ const Footer = () => (
       <div className="about-web">
         <h1>MFTO</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-          veritatis iste dolores at assumenda reprehenderit nesciunt consectetur
+          MFTO.Inc pioneers automated trading and financial analytics, blending 
+          advanced technology with financial expertise to deliver innovative 
+          client solutions.
         </p>
         <div className="social-media-links">
           {/* <div className="icons">
@@ -48,67 +49,67 @@ const Footer = () => (
         <div className="list">
           <p>
             <span>&gt;</span>
-            <span>Space Agency</span>
+            <span>Auto Trading Systems</span>
           </p>
 
           <p>
             <span>&gt;</span>
-            <span>Rocket</span>
+            <span>System Development</span>
           </p>
 
           <p>
             <span>&gt;</span>
-            <span>Decoration Cargo</span>
+            <span>Application Development</span>
           </p>
 
           <p>
             <span>&gt;</span>
-            <span>Vehicle</span>
+            <span>Research</span>
           </p>
 
           <p>
             <span>&gt;</span>
-            <span>Construction</span>
+            <span>Consulting</span>
           </p>
         </div>
       </div>
       <div className="outlook">
-        <h1>Outlook</h1>
+        <h1>Quick Links</h1>
         <div className="list">
           <p>
             <span>&gt;</span>
-            <span>Get a quote</span>
+            <span>Request Demo</span>
           </p>
 
           <p>
             <span>&gt;</span>
-            <span>Offer Zone</span>
+            <span>Investment Strategies</span>
           </p>
 
           <p>
             <span>&gt;</span>
-            <span>Our Associated</span>
+            <span>Careers</span>
           </p>
 
-          <p>
+          {/* <p>
             <span>&gt;</span>
             <span>Event &amp; Events</span>
           </p>
           <p>
             <span>&gt;</span>
             <span>Careers</span>
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="subscribe">
-        <h1>Subscribe</h1>
+        <h1>Get Reports</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          debitis blanditiis molestias? Facilis ex tenetur enim ratione aliquid
-          ipsam tempore!
+          Unlock the power of MFTO's proprietary trading algorithms. 
+          Request our free in-depth report and discover how we're revolutionizing 
+          the financial landscape through innovative technology.
         </p>
         <div className="inp">
-          <input type="text" placeholder="Your Email ID" />
+          <input type="text" placeholder="Your Email address" />
           <span>&gt;</span>
         </div>
       </div>
@@ -121,7 +122,7 @@ const Footer = () => (
       </div>
 
       <p>
-        Powered by <span>React</span>
+        Developed by <span>T.S.</span>
       </p>
     </div>
   </div>

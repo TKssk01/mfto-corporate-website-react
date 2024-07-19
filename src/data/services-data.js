@@ -1,45 +1,51 @@
 // import Car from "../assets/images/car.png";
-import FinanceDollar from "../assets/images/finance-dollar.png";
-import Airplane from "../assets/images/airplane.png";
-import Balloons from "../assets/images/balloons.png";
-import Building from "../assets/images/building.png";
-import Rocket from "../assets/images/rocket.png";
+import FinanceDollar from "../assets/images/finance-dollar-2.png";
+import Technology from "../assets/images/internet-2.png";
+import Investment from "../assets/images/investment-2.png";
+import Trading from "../assets/images/trading-2.png";
+import Analytics from "../assets/images/analytics-3.png";
+
+
+// import Airplane from "../assets/images/airplane.png";
+// import Balloons from "../assets/images/balloons.png";
+// import Building from "../assets/images/building.png";
+// import Rocket from "../assets/images/rocket.png";
 
 
 export const serviceData = [
   {
     id: 1,
     icon: FinanceDollar,
-    title: "Finance",
+    title: "Financial Engineering",
     about:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing el ducimus quibusdam a omnis, architecto saepe officia neque corporis fuga quaerat ratione.",
+      "Leverage advanced financial models and algorithms to optimize your investment strategies and risk management approaches.",
   },
   {
     id: 2,
-    icon: Airplane,
-    title: "Jet Plans",
+    icon: Technology,
+    title: "Technological Innovation",
     about:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur earum voluptas cupiditae officia neque corporis fuga quaerat ratione.",
+      "Utilize cutting-edge technologies including AI and machine learning to stay ahead in the rapidly evolving financial markets.",
   },
   {
     id: 3,
-    title: "Space Agency",
+    title: "Investment Strategy",
     about:
-      "Lorem ipsum dolor, sit amet consectetur adipissaepe officia neque corporis fuga quaerat ratione.",
-    icon: Rocket,
+      "Develop and implement customized investment strategies based on your unique financial goals and risk tolerance.",
+    icon: Investment,
   },
   {
     id: 4,
-    title: "Decoration",
+    title: "Automated Trading",
     about:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur earum voluptas cupiditatpe officia neque corporis fuga quaerat ratione.",
-    icon: Balloons,
+      "Implement high-frequency trading systems and algorithmic strategies to execute trades with precision and capitalize on market inefficiencies.",
+    icon: Trading,
   },
   {
     id: 5,
-    title: "Contruction",
+    title: "Market Analytics",
     about:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur earum voluptas cupiditataepe officia neque corporis fuga quaerat ratione.",
-    icon: Building,
+      "Gain deep insights from comprehensive market data analysis, enabling informed decision-making and predictive modeling for future market trends.",
+    icon: Analytics,
   },
 ];
