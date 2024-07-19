@@ -28,7 +28,7 @@ const Articles = () => (
         </div>
         <h1>WHO WE ARE</h1>
         <p>
-          At MFTO.Inc, we combine advanced algorithms with financial expertise 
+          At MFTO, we combine advanced algorithms with financial expertise 
           to pioneer innovative automated trading systems. Our team delivers 
           cutting-edge market insights, revolutionizing fintech.
         </p>

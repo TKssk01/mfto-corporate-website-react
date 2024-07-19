@@ -20,7 +20,7 @@ const Footer = () => (
       <div className="about-web">
         <h1>MFTO</h1>
         <p>
-          MFTO.Inc pioneers automated trading and financial analytics, blending 
+          MFTO Inc. pioneers automated trading and financial analytics, blending 
           advanced technology with financial expertise to deliver innovative 
           client solutions.
         </p>
