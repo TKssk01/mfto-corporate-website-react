@@ -19,9 +19,9 @@ const ContactUs = () => {
             You can reach us through the following contact details:
           </p>
           <ul>
-            <li>Email: contact@company.com</li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Address: 1234 Street Name, City, State, ZIP</li>
+            <li>Email: rapidtech.b@gmail.com</li>
+            <li>Phone: (+1) 857-999-8427</li>
+            <li>Address: Cambridge, MA</li>
           </ul>
           <p>
             Our office hours are Monday to Friday, 9 AM to 5 PM. We strive to respond
@@ -30,6 +30,26 @@ const ContactUs = () => {
           <p>
             Thank you for reaching out to us. We look forward to connecting with you!
           </p>
+        </div>
+        <div className="contact-form">
+          <h2>Contact Form</h2>
+          <p>Please fill out the form below with the necessary details.</p>
+          <form>
+            <div className="form-group">
+              <label htmlFor="name">Name <span className="required">*</span></label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email <span className="required">*</span></label>
+              <input type="email" id="email" name="email" required />
+              <small>example@example.com</small>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message <span className="required">*</span></label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" className="submit-button">Send</button>
+          </form>
         </div>
       </div>
     </div>

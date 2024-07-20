@@ -48,12 +48,12 @@
 
   .reveal-text {
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 1.0s ease, transform 1.0s ease;
-  
-    &.active {
-      opacity: 1;
-      transform: translateY(0);
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 1.0s ease, transform 5.0s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+     
+      &.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
   }
 

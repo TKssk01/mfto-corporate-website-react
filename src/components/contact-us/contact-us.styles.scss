@@ -1,36 +1,86 @@
-.contact-us-container {
-    font-family: 'Arial, sans-serif';
-    color: #333;
-    text-align: center;
-    padding-top: 140px;
-  }
-  
-//   .about-hero {
-//     background-image: url('../assets/images/backgroud.jpg'); // 背景画像を追加
-//     background-size: cover;
-//     background-position: center;
-//     color: white;
-//     padding: 100px 20px;
-//     margin-bottom: 20px;
-//   }
-  
-  .contact-us-hero h1 {
-    font-size: 3em;
-    margin: 0;
-  }
-  
-  .contact-us-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    background: #f9f9f9;
+.contact-us-hero {
+    margin-top: 180px; /* 上の余白を180pxに設定 */
+    text-align: center; /* タイトルを中央揃え */
+}
+
+.contact-us-content {
+    text-align: center; /* テキストを中央揃え */
+    max-width: 600px; /* 最大幅を設定して中央揃え */
+    margin: 0 auto; /* 左右中央揃え */
+    padding: 20px; /* パディングを追加 */
+
+    ul {
+        list-style-position: inside; /* マーカーをテキストの内側に */
+        padding-left: 0; /* 左のパディングを削除 */
+        display: inline-block; /* リスト全体をインラインブロックに */
+        text-align: left; /* リストアイテムを左揃え */
+    }
+    
+}
+
+.contact-form {
+    margin: 50px auto 20px; /* 上の余白を180px、左右中央揃え */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px; /* 最大幅を設定して中央揃え */
+    
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      text-align: center; /* タイトルを中央揃え */
+    }
   
-  .contact-us-content p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+    p {
+      margin-bottom: 20px;
+      text-align: center; /* 説明文を中央揃え */
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        text-align: left; /* ラベルは左揃えのまま */
+      }
+  
+      input, textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+  
+      small {
+        display: block;
+        margin-top: 5px;
+        color: #999;
+        text-align: left; /* サンプルテキストは左揃えのまま */
+      }
+  
+      .required {
+        color: red;
+      }
+    }
+  
+    .submit-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 0 auto; /* ボタンを中央揃え */
+      display: block;
+      text-align: center;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
   }
   
