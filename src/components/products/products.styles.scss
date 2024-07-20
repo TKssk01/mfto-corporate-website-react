@@ -1,0 +1,36 @@
+.products-container {
+    font-family: 'Arial, sans-serif';
+    color: #333;
+    text-align: center;
+    padding-top: 140px;
+  }
+  
+//   .about-hero {
+//     background-image: url('../assets/images/backgroud.jpg'); // 背景画像を追加
+//     background-size: cover;
+//     background-position: center;
+//     color: white;
+//     padding: 100px 20px;
+//     margin-bottom: 20px;
+//   }
+  
+  .products-hero h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .products-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .products-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  

@@ -51,6 +51,11 @@ import KnowUs from './components/know-us/know-us.component';
 import ServiceList from './components/service-list/service-list.component';
 import Services from './components/services/services.component';
 import AboutUs from './components/aboutus/aboutus.component'; // AboutUsをインポート
+import Products from './components/products/products.component';
+import News from './components/news/news.component';
+import ContactUs from './components/contact-us/contact-us.component';
+
+
 
 function App() {
   return (
@@ -59,6 +64,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         {/* 他のルートもここに追加 */}
       </Routes>
       <Footer />

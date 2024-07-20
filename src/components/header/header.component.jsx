@@ -151,7 +151,7 @@ const Header = () => {
       </span>
       <span className="options">
         <span className="active"></span>
-        <Link to="/services">We offer</Link>
+        <Link to="/products">We offer</Link>
         <p>Our services</p>
       </span>
       <span className="options">
