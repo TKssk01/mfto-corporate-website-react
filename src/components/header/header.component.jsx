@@ -1,109 +1,5 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import { Link, useNavigate } from "react-router-dom";
-// import { useMediaQuery } from 'react-responsive';
-// import "./header.styles.scss";
-
-// import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
-// import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
-// import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-// import MenuIcon from '@mui/icons-material/Menu';
-
-// const Header = () => {
-//   const header_ = useRef();
-//   const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
-//   const [menuOpen, setMenuOpen] = useState(false);
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       if (isDesktop) {
-//         if (window.pageYOffset > 0) {
-//           header_.current.classList.add("scrolled");
-//         } else {
-//           header_.current.classList.remove("scrolled");
-//         }
-//       } else {
-//         header_.current.classList.remove("scrolled");
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, [isDesktop]);
-
-//   const Navigation = () => (
-//     <>
-//       <span className="options">
-//         <span className="active"></span>
-//         <Link to="/">Home</Link>
-//         <p>Main page</p>
-//       </span>
-//       <span className="options">
-//         <span className="active"></span>
-//         <Link to="/about">Corporate</Link> {/* Aboutページへのリンクを設定 */}
-//         <p>About us</p>
-//       </span>
-//     </>
-//   );
-
-//   return (
-//     <div ref={header_} className={`header ${!isDesktop ? 'mobile' : ''}`}>
-//       <div className="go-to-top">
-//         <span onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }}>
-//           <ArrowUpwardIcon />
-//         </span>
-//       </div>
-
-//       <div className="upper">
-//         <div className="logo" onClick={() => navigate("/")} style={{ cursor: 'pointer' }}>
-//           <div className="icon">
-//             <SportsVolleyballIcon />
-//           </div>
-//           <div className="content">
-//             <h1>MFTO</h1>
-//             <p>Corporation</p>
-//           </div>
-//         </div>
-//         {isDesktop && (
-//           <div className="contact-us">
-//             <div className="first">
-//               <PhoneInTalkOutlinedIcon />
-//               <div className="nos">
-//                 <span>+1 8579998427</span>
-//                 <p>24 x 7 Helpline</p>
-//               </div>
-//             </div>
-//           </div>
-//         )}
-//         {!isDesktop && (
-//           <div className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)}>
-//             <MenuIcon />
-//           </div>
-//         )}
-//       </div>
-//       {isDesktop ? (
-//         <div className="navigation">
-//           <Navigation />
-//         </div>
-//       ) : menuOpen && (
-//         <div className="mobile-navigation">
-//           <Navigation />
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Header;
-
-
-
-
-
-
-
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import "./header.styles.scss";
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
@@ -137,16 +33,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDesktop]);
 
-  // 新規追加: ホームリンクのクリックハンドラ
-  const handleHomeClick = (e) => {
+  // 変更点1: 新しい handleNavClick 関数を追加
+  // この関数は全てのナビゲーションリンクで使用され、
+  // クリック時の動作を統一します
+  const handleNavClick = (e, path) => {
     e.preventDefault();
-    if (location.pathname === '/') {
-      // ホームページにいる場合、トップにスクロール
+    if (location.pathname === path) {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     } else {
-      // それ以外の場合、ホームページにナビゲートしてからトップにスクロール
-      navigate('/');
-      // ナビゲーション後にスクロールするために、setTimeout を使用
+      navigate(path);
       setTimeout(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       }, 100);
@@ -155,29 +50,31 @@ const Header = () => {
 
   const Navigation = () => (
     <>
+      {/* 変更点2: 各ナビゲーションリンクを <a> タグに変更し、
+        onClick イベントで handleNavClick を呼び出すように修正 */}
       <span className="options">
         <span className="active"></span>
-        <a href="/" onClick={handleHomeClick}>Home</a>
+        <a href="/" onClick={(e) => handleNavClick(e, '/')}>Home</a>
         <p>Main page</p>
       </span>
       <span className="options">
         <span className="active"></span>
-        <Link to="/about">Corporate</Link>
+        <a href="/about" onClick={(e) => handleNavClick(e, '/about')}>Corporate</a>
         <p>About us</p>
       </span>
       <span className="options">
         <span className="active"></span>
-        <Link to="/products">We offer</Link>
+        <a href="/products" onClick={(e) => handleNavClick(e, '/products')}>We offer</a>
         <p>Our services</p>
       </span>
       <span className="options">
         <span className="active"></span>
-        <Link to="/news">News</Link>
+        <a href="/news" onClick={(e) => handleNavClick(e, '/news')}>News</a>
         <p>Latest on us</p>
       </span>
       <span className="options">
         <span className="active"></span>
-        <Link to="/contact-us">Contact us</Link>
+        <a href="/contact-us" onClick={(e) => handleNavClick(e, '/contact-us')}>Contact us</a>
         <p>Get in touch</p>
       </span>
     </>

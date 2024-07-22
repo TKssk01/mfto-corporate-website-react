@@ -1,57 +1,236 @@
-import React from 'react';
+// import React, { useState } from 'react';
+// import { motion } from 'framer-motion';
+// import Header from '../header/header.component';
+// import Footer from '../footer/footer.component';
+// import './contact-us.styles.scss';
+
+// const ContactUs = () => {
+//   const [formData, setFormData] = useState({
+//     lastName: '',
+//     firstName: '',
+//     email: '',
+//     message: ''
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log('Form submitted:', formData);
+//     // Here you would typically send the data to your backend
+//   };
+
+//   return (
+//     <div className="contact-us-page">
+//       <Header />
+//       <motion.div 
+//         className="contact-us-container"
+//         initial={{ opacity: 0 }}
+//         animate={{ opacity: 1 }}
+//         transition={{ duration: 0.5 }}
+//       >
+//         <h1 className="contact-us-title">Contact Us</h1>
+//         <p className="contact-us-subtitle">Get in Touch</p>
+//         <div className="contact-form-wrapper">
+//           <div className="form-illustration">
+//             <img src="/api/placeholder/400/300" alt="Contact illustration" />
+//           </div>
+//           <motion.form 
+//             className="contact-form"
+//             onSubmit={handleSubmit}
+//             initial={{ y: 50, opacity: 0 }}
+//             animate={{ y: 0, opacity: 1 }}
+//             transition={{ delay: 0.2, duration: 0.5 }}
+//           >
+//             <div className="form-row">
+//               <div className="form-group">
+//                 <label htmlFor="lastName">Last Name</label>
+//                 <input 
+//                   type="text" 
+//                   id="lastName" 
+//                   name="lastName" 
+//                   value={formData.lastName}
+//                   onChange={handleChange}
+//                   placeholder="Smith"
+//                   required 
+//                 />
+//               </div>
+//               <div className="form-group">
+//                 <label htmlFor="firstName">First Name</label>
+//                 <input 
+//                   type="text" 
+//                   id="firstName" 
+//                   name="firstName" 
+//                   value={formData.firstName}
+//                   onChange={handleChange}
+//                   placeholder="John"
+//                   required 
+//                 />
+//               </div>
+//             </div>
+//             <div className="form-group">
+//               <label htmlFor="email">Email Address</label>
+//               <input 
+//                 type="email" 
+//                 id="email" 
+//                 name="email" 
+//                 value={formData.email}
+//                 onChange={handleChange}
+//                 placeholder="example@example.com"
+//                 required 
+//               />
+//             </div>
+//             <div className="form-group">
+//               <label htmlFor="message">Message</label>
+//               <textarea 
+//                 id="message" 
+//                 name="message" 
+//                 rows="4" 
+//                 value={formData.message}
+//                 onChange={handleChange}
+//                 placeholder="Please enter your message"
+//                 required
+//               ></textarea>
+//             </div>
+//             <motion.button 
+//               type="submit" 
+//               className="submit-button"
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.95 }}
+//             >
+//               Submit
+//             </motion.button>
+//           </motion.form>
+//         </div>
+//       </motion.div>
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default ContactUs;
+
+
+
+// /src/components/contact-us/contact-us.component.jsx
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Header from '../header/header.component';
-import './contact-us.styles.scss'; // スタイルシートをインポート
+import Footer from '../footer/footer.component';
+import ThreeDModal from '../three-d-modal/ThreeDModal';
+import './contact-us.styles.scss';
+import Unknown from '../../assets/images/unknown.svg';
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    lastName: '',
+    firstName: '',
+    email: '',
+    message: ''
+  });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Here you would typically send the data to your backend
+  };
+
   return (
-    <div>
+    <div className="contact-us-page">
       <Header />
-      <div className="contact-us-container">
-        <div className="contact-us-hero">
-          <h1>Contact Us</h1>
-        </div>
-        <div className="contact-us-content">
-          <p>
-            We would love to hear from you! Whether you have a question about our services,
-            pricing, or anything else, our team is ready to answer all your questions.
-          </p>
-          <p>
-            You can reach us through the following contact details:
-          </p>
-          <ul>
-            <li>Email: rapidtech.b@gmail.com</li>
-            <li>Phone: (+1) 857-999-8427</li>
-            <li>Address: Cambridge, MA</li>
-          </ul>
-          <p>
-            Our office hours are Monday to Friday, 9 AM to 5 PM. We strive to respond
-            to all inquiries within 24 hours on business days.
-          </p>
-          <p>
-            Thank you for reaching out to us. We look forward to connecting with you!
-          </p>
-        </div>
-        <div className="contact-form">
-          <h2>Contact Form</h2>
-          <p>Please fill out the form below with the necessary details.</p>
-          <form>
-            <div className="form-group">
-              <label htmlFor="name">Name <span className="required">*</span></label>
-              <input type="text" id="name" name="name" required />
+      <motion.div 
+        className="contact-us-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="contact-us-title">Contact Us</h1>
+        <p className="contact-us-subtitle">Get in Touch</p>
+        <div className="contact-form-wrapper">
+          <div className="form-illustration">
+            <img src={Unknown} alt="Contact illustration" /> {/* SVG画像の使用 */}
+          </div>
+          <motion.form 
+            className="contact-form"
+            onSubmit={handleSubmit}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="lastName">Last Name</label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName" 
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Smith"
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="firstName">First Name</label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName" 
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="John"
+                  required 
+                />
+              </div>
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email <span className="required">*</span></label>
-              <input type="email" id="email" name="email" required />
-              <small>example@example.com</small>
+              <label htmlFor="email">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="example@example.com"
+                required 
+              />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message <span className="required">*</span></label>
-              <textarea id="message" name="message" rows="4" required></textarea>
+              <label htmlFor="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4" 
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Please enter your message"
+                required
+              ></textarea>
             </div>
-            <button type="submit" className="submit-button">Send</button>
-          </form>
+            <motion.button 
+              type="submit" 
+              className="submit-button"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Submit
+            </motion.button>
+            {/* <button type="button" onClick={() => setIsModalOpen(true)} className="three-d-button">
+              Show 3D
+            </button> */}
+          </motion.form>
         </div>
-      </div>
+      </motion.div>
+      <Footer />
+      <ThreeDModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
