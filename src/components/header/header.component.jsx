@@ -103,10 +103,9 @@
 
 
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import "./header.styles.scss";
-
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
 import SportsVolleyballIcon from '@mui/icons-material/SportsVolleyball';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
@@ -117,6 +116,7 @@ const Header = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,11 +137,27 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDesktop]);
 
+  // 新規追加: ホームリンクのクリックハンドラ
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      // ホームページにいる場合、トップにスクロール
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      // それ以外の場合、ホームページにナビゲートしてからトップにスクロール
+      navigate('/');
+      // ナビゲーション後にスクロールするために、setTimeout を使用
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   const Navigation = () => (
     <>
       <span className="options">
         <span className="active"></span>
-        <Link to="/">Home</Link>
+        <a href="/" onClick={handleHomeClick}>Home</a>
         <p>Main page</p>
       </span>
       <span className="options">
