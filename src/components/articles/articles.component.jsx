@@ -21,7 +21,7 @@ const Articles = () => (
       <div className="card">
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+            src="https://plus.unsplash.com/premium_photo-1661756423422-4486e27eb6dd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="building"
           />{" "}
           <button>Read More</button>
@@ -38,7 +38,7 @@ const Articles = () => (
       <div className="card">
         <div className="image">
           <img
-            src="https://images.unsplash.com/photo-1430285561322-7808604715df?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+            src="https://plus.unsplash.com/premium_photo-1683141154082-324d296f3c66?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="home"
           />
           <button>Read More</button>

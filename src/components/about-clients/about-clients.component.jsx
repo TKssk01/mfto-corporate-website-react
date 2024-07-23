@@ -8,16 +8,16 @@ const AboutClient = () => (
   <div className="about-clients">
     <div className="statistics">
       <div className="stats">
-        <span>15</span>
-        <span>Countries Covered</span>
+        <span>10+</span>
+        <span>Global Markets Accessed</span>
       </div>
       <div className="stats">
-        <span>2406</span>
-        <span>Satisfied Clients</span>
+        <span>100+</span>
+        <span>Trades Executed Daily</span>
       </div>
       <div className="stats">
-        <span>150</span>
-        <span>Offices Worldwide</span>
+        <span>24/7</span>
+        <span>Market Monitoring</span>
       </div>
       <div className="stats">
         <span>100%</span>
@@ -29,3 +29,21 @@ const AboutClient = () => (
 );
 
 export default AboutClient;
+
+
+{/* <div className="stats">
+<span>10+</span>
+<span>Global Markets Accessed</span>
+</div>
+<div className="stats">
+<span>1000+</span>
+<span>Trades Executed Daily</span>
+</div>
+<div className="stats">
+<span>99.9%</span>
+<span>System Uptime</span>
+</div>
+<div className="stats">
+<span>24/7</span>
+<span>Market Monitoring</span>
+</div> */}
