@@ -118,7 +118,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../header/header.component';
-import Footer from '../footer/footer.component';
 import ThreeDModal from '../three-d-modal/ThreeDModal';
 import './contact-us.styles.scss';
 import Unknown from '../../assets/images/unknown.svg';
@@ -229,7 +228,6 @@ const ContactUs = () => {
           </motion.form>
         </div>
       </motion.div>
-      <Footer />
       <ThreeDModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} />
     </div>
   );
