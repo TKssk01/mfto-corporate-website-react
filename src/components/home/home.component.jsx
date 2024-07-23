@@ -14,7 +14,7 @@ const Home = () => {
       {/* ここから追加されとる */}
       <div className="content-wrapper">
         <h1 className={`heading reveal-text ${isRevealed ? 'active' : ''}`}>
-          Ready for a smart financial future!
+          Ready for smart financial future!
         </h1>
         <p className={`para reveal-text ${isRevealed ? 'active' : ''}`}>
           Empowering investors with cutting-edge algorithms and thoughtful 

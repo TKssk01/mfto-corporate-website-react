@@ -53,7 +53,31 @@ body {
   object-fit: cover;
   filter: brightness(1.0); /* ビデオ自体も少し暗く */
   z-index: 1;
+  transition: opacity 1s ease-in-out; /* フェードエフェクト用 */
 }
+
+/* 新規: 現在表示中のビデオのz-indexを設定 */
+.video-background.current {
+  z-index: 1;
+}
+
+/* 新規: 次に表示するビデオの初期状態を設定 */
+.video-background.next {
+  z-index: 0;
+  opacity: 0;
+}
+
+/* 新規: 現在のビデオがフェードアウトする際のスタイル */
+.video-background.current.fade-out {
+  opacity: 0;
+}
+
+/* 新規: 次のビデオがフェードインする際のスタイル */
+.video-background.next.fade-in {
+  opacity: 1;
+}
+
+
 
 .content {
   position: relative;
@@ -78,7 +102,7 @@ body {
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-/* Scrollbar */
+/* Scrollbar styles remain unchanged */
 ::-webkit-scrollbar {
   width: 12px;
   background-color: rgba(8, 8, 8, 0.05);
