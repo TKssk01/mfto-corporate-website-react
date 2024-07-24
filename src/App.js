@@ -14,10 +14,12 @@ import AboutUs from './components/aboutus/aboutus.component'; // AboutUsをイ�
 import Products from './components/products/products.component';
 import News from './components/news/news.component';
 import ContactUs from './components/contact-us/contact-us.component';
+import ScrollToTop from './scroll-to-top'; 
 
 function App() {
   return (
     <>
+     <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
