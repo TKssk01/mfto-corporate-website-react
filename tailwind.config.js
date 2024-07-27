@@ -1,9 +1,13 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html","./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '140': '35rem',  // 140pxは35remと同等であるため、適切な値を設定
+      },
+    },
   },
   plugins: [],
 }
