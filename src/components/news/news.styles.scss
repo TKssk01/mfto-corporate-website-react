@@ -1,36 +1,31 @@
 .news-container {
-    font-family: 'Arial, sans-serif';
-    color: #333;
-    text-align: center;
-    padding-top: 140px;
-  }
-  
-//   .about-hero {
-//     background-image: url('../assets/images/backgroud.jpg'); // 背景画像を追加
-//     background-size: cover;
-//     background-position: center;
-//     color: white;
-//     padding: 100px 20px;
-//     margin-bottom: 20px;
-//   }
-  
-  .news-hero h1 {
-    font-size: 3em;
-    margin: 0;
-  }
-  
-  .news-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .news-content p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.news-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 180px; /* ヘッダーの下に180pxの余白を追加 */
+}
+
+.news-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.coming-soon {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4b5563;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

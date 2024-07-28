@@ -1,11 +1,12 @@
 module.exports = {
   content: [
-    "./index.html","./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",  // publicフォルダー内のindex.htmlをスキャン対象に追加
+    "./src/**/*.{js,jsx,ts,tsx}",  // srcフォルダー内の全てのJavaScript/TypeScriptファイルをスキャン対象に追加
   ],
   theme: {
     extend: {
       spacing: {
-        '140': '35rem',  // 140pxは35remと同等であるため、適切な値を設定
+        '140': '35rem',  // カスタムスペーシングの値を追加
       },
     },
   },

@@ -37,7 +37,7 @@ const FeatureSection = ({ id, title, description, FeatureComponent, reverse = fa
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.9 }
     );
 
     if (imageRef.current) {
@@ -45,9 +45,9 @@ const FeatureSection = ({ id, title, description, FeatureComponent, reverse = fa
     }
 
     return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
+      // if (imageRef.current) {
+      //   observer.unobserve(imageRef.current);
+      // }
     };
   }, []);
 
