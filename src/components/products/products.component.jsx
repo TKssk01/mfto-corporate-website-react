@@ -8,19 +8,19 @@ import './products.styles.scss';
 const features = [
   {
     id: 1,
-    title: "Algorithm using our unique theory",
+    title: "Sphere System",
     description: "Our automated trading systems leverage sophisticated financial engineering and machine learning algorithms to capture minute market movements. Our proprietary algorithms quickly identify market inefficiencies, ensuring optimal trading opportunities are never missed.",
-    FeatureComponent: ComputersCanvas
-  },
-  {
-    id: 2,
-    title: "24/7 System Operation and Stability",
-    description: "Our expert team continuously monitors the stability and efficiency of our systems. We swiftly respond to market changes and consistently optimize performance, providing clients with a reliable environment to focus on their trading activities.",
     FeatureComponent: EarthCanvas
   },
   {
+    id: 2,
+    title: "System Trade Development",
+    description: "Our expert team continuously monitors the stability and efficiency of our systems. We swiftly respond to market changes and consistently optimize performance, providing clients with a reliable environment to focus on their trading activities.",
+    FeatureComponent: ComputersCanvas
+  },
+  {
     id: 3,
-    title: "Expert Education and Consulting",
+    title: "Consulting",
     description: "We offer educational programs led by financial engineering experts and experienced traders. Through up-to-date market trend analysis and risk management strategy consulting, we support our clients in enhancing their investment skills.",
     FeatureComponent: PackmoneyCanvas
   }

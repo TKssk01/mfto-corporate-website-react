@@ -1,78 +1,78 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { Suspense, useEffect, useState } from "react"; // ReactおよびSuspense, useEffect, useStateフックをインポート
+import { Canvas } from "@react-three/fiber"; // three.jsのラッパーであるCanvasコンポーネントをインポート
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei"; // dreiから便利なコンポーネントをインポート
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../Loader"; // ローダーコンポーネントをインポート
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const Computers = ({ isMobile }) => { // Computersコンポーネントを定義し、isMobileプロップを受け取る
+  const computer = useGLTF("./desktop_pc/scene.gltf"); // GLTFファイルを読み込む
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+    <mesh> {/* メッシュオブジェクトを返す */}
+      <hemisphereLight intensity={0.15} groundColor='black' /> {/* 半球ライトを追加 */}
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
+        position={[-20, 50, 10]} // スポットライトの位置
+        angle={0.12} // スポットライトの角度
+        penumbra={1} // スポットライトのペナンブラ
+        intensity={1} // スポットライトの強度
+        castShadow // 影をキャストする
+        shadow-mapSize={1024} // 影の解像度
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={1} /> {/* ポイントライトを追加 */}
       <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        object={computer.scene} // 読み込んだGLTFファイルのシーンオブジェクト
+        scale={isMobile ? 0.7 : 0.75} // モバイルデバイスのサイズに応じてスケールを変更
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]} // モバイルデバイスの位置に応じて位置を変更
+        rotation={[-0.01, -0.2, -0.1]} // オブジェクトの回転
       />
     </mesh>
   );
 };
 
-const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const ComputersCanvas = () => { // ComputersCanvasコンポーネントを定義
+  const [isMobile, setIsMobile] = useState(false); // isMobileという状態を定義し、初期値をfalseに設定
 
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+  useEffect(() => { // コンポーネントがマウントされたときに実行されるuseEffectフック
+    // 画面サイズの変更を監視するリスナーを追加
+    const mediaQuery = window.matchMedia("(max-width: 450px)");
 
-    // Set the initial value of the `isMobile` state variable
+    // isMobile状態の初期値を設定
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
+    // メディアクエリの変更を処理するコールバック関数を定義
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Add the callback function as a listener for changes to the media query
+    // メディアクエリの変更を監視するリスナーを追加
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Remove the listener when the component is unmounted
+    // コンポーネントがアンマウントされたときにリスナーを削除
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
-  }, []);
+  }, []); // 空の依存配列で、初回レンダリング時にのみ実行
 
   return (
     <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      frameloop='demand' // フレームループを必要なときにのみ実行
+      shadows // シャドウを有効にする
+      dpr={[1, 2]} // デバイスピクセル比を設定
+      camera={{ position: [20, 3, 7], fov: 25 }} // カメラの位置と視野を設定
+      gl={{ preserveDrawingBuffer: true }} // 描画バッファを保持する
     >
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense fallback={<CanvasLoader />}> {/* 非同期コンポーネントを待つ間にローダーを表示 */}
         <OrbitControls
-          enableZoom={true} // Enable zoom
-          maxPolarAngle={Math.PI} // Allow full vertical rotation
-          minPolarAngle={0} // Allow full vertical rotation
+          enableZoom={true} // ズームを有効にする
+          maxPolarAngle={Math.PI} // 垂直回転の最大角度を設定
+          minPolarAngle={0} // 垂直回転の最小角度を設定
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile} /> {/* Computersコンポーネントをレンダリングし、isMobileプロップを渡す */}
       </Suspense>
 
-      <Preload all />
+      <Preload all /> {/* 全てのリソースをプリロード */}
     </Canvas>
   );
 };
 
-export default ComputersCanvas;
+export default ComputersCanvas; // ComputersCanvasコンポーネントをエクスポート

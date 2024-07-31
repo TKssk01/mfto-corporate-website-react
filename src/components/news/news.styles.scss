@@ -1,21 +1,84 @@
-.news-container {
-  min-height: 100vh;
-  background-color: #f3f4f6;
+
+// Variables
+$primary-color: #0A4FAF;
+$secondary-color: #1e40af;
+$text-color: #1f2937;
+$background-color: #ffffff;
+
+// Mixins
+@mixin section-spacing {
+  margin-bottom: 3rem;
 }
 
-.news-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  padding-top: 180px; /* ヘッダーの下に180pxの余白を追加 */
-}
-
-.news-title {
-  font-size: 2.5rem;
+@mixin heading {
   font-weight: bold;
-  color: #1f2937;
-  text-align: center;
-  margin-bottom: 2rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+// Styles
+.news {
+  background-color: $background-color;
+  color: $text-color;
+  min-height: 100vh;
+  padding: 2rem;
+
+  &__container {
+    padding-top: 170px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include heading;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__section {
+    @include section-spacing;
+
+    &-title {
+      @include heading;
+      font-size: 1.5rem;
+      color: $secondary-color;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__approach-list {
+    strong {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .news {
+    padding: 1rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__section-title {
+      font-size: 1.25rem;
+    }
+  }
 }
 
 .coming-soon {

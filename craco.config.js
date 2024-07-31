@@ -1,11 +1,9 @@
-// craco.config.js
 module.exports = {
-  style: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
+  webpack: {
+    configure: (webpackConfig) => {
+      // ソースマップの生成を無効にする
+      webpackConfig.devtool = false;
+      return webpackConfig;
     },
   },
 };
