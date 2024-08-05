@@ -21,12 +21,12 @@ $background-color: #ffffff;
   background-color: $background-color;
   color: $text-color;
   min-height: 100vh;
-  padding: 2rem;
+  // padding: 2rem;
 
   &__container {
-    padding-top: 170px;
-    max-width: 80%;
-    margin: 0 auto;
+    padding-top: 160px;
+    max-width: 90%;
+    margin: 2rem auto;
   }
 
   &__title {

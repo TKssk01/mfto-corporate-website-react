@@ -58,11 +58,12 @@ const ComputersCanvas = () => { // ComputersCanvasコンポーネントを定義
       frameloop='demand' // フレームループを必要なときにのみ実行
       shadows // シャドウを有効にする
       dpr={[1, 2]} // デバイスピクセル比を設定
-      camera={{ position: [20, 3, 7], fov: 25 }} // カメラの位置と視野を設定
+      camera={{ position: [20, 3, 20], fov: 25 }} // カメラの位置と視野を設定
       gl={{ preserveDrawingBuffer: true }} // 描画バッファを保持する
     >
       <Suspense fallback={<CanvasLoader />}> {/* 非同期コンポーネントを待つ間にローダーを表示 */}
         <OrbitControls
+          autoRotate
           enableZoom={true} // ズームを有効にする
           maxPolarAngle={Math.PI} // 垂直回転の最大角度を設定
           minPolarAngle={0} // 垂直回転の最小角度を設定

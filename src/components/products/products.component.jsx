@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import ComputersCanvas from '../canvas/Computers';
 import EarthCanvas from '../canvas/Earth';
 import PackmoneyCanvas from '../canvas/Pack_money';
-import GMBigcityCanvas from '../canvas/GM_Bigcity';
+// import GMBigcityCanvas from '../canvas/GM_Bigcity';
+import ProductImage from '../../assets/images/fintech-service-image2.jpg';
 import './products.styles.scss';
 
 const features = [
@@ -68,12 +69,16 @@ const FeatureSection = ({ id, title, description, FeatureComponent, reverse = fa
 
 const Products = () => {
   return (
+    
     <div className="products-page">
       <div className="products-container">
         <h1 className="products-title">Services of MFTO</h1>
         <div className="product-showcase-wrapper">
-          <div className="product-showcase">
+          {/* <div className="product-showcase">
             <GMBigcityCanvas />
+          </div> */}
+          <div className="products-main-visual">
+            <img src={ProductImage} alt="MFTO Visual Representation" className="products-main-image" />
           </div>
         </div>
         {features.map((feature, index) => (

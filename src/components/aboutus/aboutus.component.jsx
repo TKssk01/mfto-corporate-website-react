@@ -1,6 +1,8 @@
 import React from 'react';
 // import Header from '../header/header.component';
 import './aboutus.styles.scss'; // スタイルシートをインポート
+import AboutUsImage from '../../assets/images/about-us-image.jpg';
+
 
 const About = () => {
   return (
@@ -8,6 +10,10 @@ const About = () => {
       <div className="aboutus__container">
         <h1 className="aboutus__title">About MFTO</h1>
         
+        <div className="aboutus__main-visual">
+          <img src={AboutUsImage} alt="MFTO Visual Representation" className="aboutus__main-image" />
+        </div>
+
         <section className="aboutus__section">
           <h2 className="aboutus__section-title">Our Mission</h2>
           <p>

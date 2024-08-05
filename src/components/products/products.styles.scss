@@ -1,7 +1,7 @@
 .products-container {
-  width: 100%;
-  margin: 0 0;
-  padding: 202px 0 0;
+  width: 90%;
+  margin: 0 auto;
+  padding: 180px 0 0;
   display: flex;
   flex-direction: column;
   // align-items: center;
@@ -12,7 +12,7 @@
   color : #0A4FAF;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  padding: 0% 13%;
+  padding: 0% auto;
 }
 
 .product-showcase-wrapper {
@@ -31,10 +31,25 @@
   padding: 0;
 }
 
+
+.products-main-visual {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.products-main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .feature-section {
   width: 100%;
-  background-color: #f7fafc;
+  background-color: #ffffff;
   padding: 0;
+  // opacity: 0.5; // 透明度50%
   // margin-bottom: 3rem;
 }
 
@@ -63,7 +78,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -100,13 +115,13 @@
 .feature-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #2d3748;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .feature-description {
   font-size: 1.2rem;
-  color: #4a5568;
+  color: #000000;
   max-width: 600px;
 }
 
