@@ -13,6 +13,58 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  // const [currentPage, setCurrentPage] = useState('/');
+
+
+  // useEffect(() => {
+  //   setCurrentPage(location.pathname);
+  // }, [location]);
+
+  // const handleNavClick = (e, path) => {
+  //   e.preventDefault();
+  //   setCurrentPage(path);
+  //   if (location.pathname === path) {
+  //     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  //   } else {
+  //     navigate(path);
+  //     setTimeout(() => {
+  //       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  //     }, 100);
+  //   }
+  // };
+
+  // const Navigation = () => (
+  //   <>
+  //     <span className={`options ${currentPage === '/' ? 'active' : ''}`}>
+  //       <span className="active-bar"></span>
+  //       <a href="/" onClick={(e) => handleNavClick(e, '/')}>Home</a>
+  //       <p>Main page</p>
+  //     </span>
+  //     <span className={`options ${currentPage === '/about' ? 'active' : ''}`}>
+  //       <span className="active-bar"></span>
+  //       <a href="/about" onClick={(e) => handleNavClick(e, '/about')}>Corporate</a>
+  //       <p>About us</p>
+  //     </span>
+  //     <span className={`options ${currentPage === '/products' ? 'active' : ''}`}>
+  //       <span className="active-bar"></span>
+  //       <a href="/products" onClick={(e) => handleNavClick(e, '/products')}>We offer</a>
+  //       <p>Our services</p>
+  //     </span>
+  //     <span className={`options ${currentPage === '/news' ? 'active' : ''}`}>
+  //       <span className="active-bar"></span>
+  //       <a href="/news" onClick={(e) => handleNavClick(e, '/news')}>News</a>
+  //       <p>Latest on us</p>
+  //     </span>
+  //     <span className={`options ${currentPage === '/contact-us' ? 'active' : ''}`}>
+  //       <span className="active-bar"></span>
+  //       <a href="/contact-us" onClick={(e) => handleNavClick(e, '/contact-us')}>Contact us</a>
+  //       <p>Get in touch</p>
+  //     </span>
+  //   </>
+  // );
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
