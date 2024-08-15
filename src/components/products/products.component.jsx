@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import ComputersCanvas from '../canvas/Computers';
 import EarthCanvas from '../canvas/Earth';
 import PackmoneyCanvas from '../canvas/Pack_money';
@@ -78,10 +78,15 @@ const Products = () => {
           <div className="products-main-visual">
             <img src={ProductImage} alt="MFTO Visual Representation" className="products-main-image" />
             <div className="demo-button-container">
-              <Link to="#" className="demo-button">
+              <a 
+                href="https://takahiro-sasaki.web.app/" 
+                className="demo-button" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <span className="demo-button-text">Sphere System</span>
                 <span className="demo-button-subtext">Demo</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
