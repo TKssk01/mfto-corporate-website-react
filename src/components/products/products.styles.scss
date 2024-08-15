@@ -144,3 +144,104 @@
     transform: translateX(0);
   }
 }
+
+
+
+
+.demo-button-container {
+  position: absolute; /* 親要素に対して絶対位置を設定 */
+  bottom: 0px; /* コンテナを下部に配置 */
+  left: 50%; /* コンテナを水平中央に配置 */
+  transform: translate(-50%, 20px); /* コンテナの位置を水平中央に調整し、少し下に移動 */
+  z-index: 10; /* コンテナの重なり順を指定 */
+  width: 100%; /* コンテナの幅を100%に設定 */
+  max-width: 500px; /* ボタンの最大幅を500pxに設定 */
+}
+
+.demo-button {
+  display: block; /* ボタンをブロック要素にして幅いっぱいに広げる */
+  width: 100%; /* ボタンの幅を100%に設定 */
+  padding: 20px 60px; /* ボタンの内側の余白を設定（上下20px、左右60px） */
+  background-color: #2525AD; /* ボタンの背景色を#2525ADに設定 */
+  color: #ffffff; /* ボタンの文字色を白に設定 */
+  text-decoration: none; /* ボタンのテキストの下線を除去 */
+  border-radius: 40px; /* ボタンの角を丸くする */
+  font-family: 'Times New Roman', Times, serif; /* ボタンのフォントを'Times New Roman'に設定 */
+  text-align: center; /* ボタン内のテキストを中央揃え */
+  transition: all 0.3s ease; /* ボタンのすべてのプロパティに対して0.3秒のトランジションを設定 */
+  box-shadow: 0 6px 12px rgba(37, 37, 173, 0.4); /* ボタンにシャドウを追加 */
+  overflow: hidden; /* コンテンツがはみ出さないようにする */
+  position: relative; /* ボタン内で絶対位置を設定するために相対位置を設定 */
+
+  &::before {
+    content: ''; /* ボタンの前に空のコンテンツを追加 */
+    position: absolute; /* この擬似要素を絶対位置に設定 */
+    top: 0; /* 擬似要素をボタンの上端に配置 */
+    left: -100%; /* 擬似要素をボタンの左外側に配置 */
+    width: 100%; /* 擬似要素の幅を100%に設定 */
+    height: 100%; /* 擬似要素の高さを100%に設定 */
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    ); /* 擬似要素にグラデーションの背景を設定 */
+    transition: all 0.5s; /* 擬似要素に対して0.5秒のトランジションを設定 */
+  }
+
+  &:hover {
+    background-color: #3030BE; /* ホバー時にボタンの背景色を変更 */
+    transform: translateY(-5px); /* ホバー時にボタンを少し上に移動 */
+    box-shadow: 0 8px 15px rgba(37, 37, 173, 0.5); /* ホバー時にシャドウを強調 */
+
+    &::before {
+      left: 100%; /* 擬似要素を右側にスライドさせる */
+    }
+  }
+
+  .demo-button-text {
+    display: block; /* テキストをブロック要素に設定 */
+    font-size: 36px; /* テキストサイズを36pxに設定 */
+    font-weight: bold; /* テキストを太字に設定 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* テキストにシャドウを追加 */
+  }
+
+  .demo-button-subtext {
+    display: block; /* サブテキストをブロック要素に設定 */
+    font-size: 28px; /* サブテキストサイズを28pxに設定 */
+    text-transform: uppercase; /* サブテキストをすべて大文字に変換 */
+    letter-spacing: 1.5px; /* サブテキストの文字間隔を広げる */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* サブテキストにシャドウを追加 */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 37, 173, 0.4); /* アニメーション開始時のシャドウを設定 */
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 37, 173, 0); /* アニメーション中間時にシャドウを広げて透明に */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 37, 173, 0); /* アニメーション終了時のシャドウを元に戻す */
+  }
+}
+.demo-button {
+  animation: pulse 2s infinite; /* ボタンに2秒ごとに繰り返すpulseアニメーションを設定 */
+}
+
+// レスポンシブデザイン用の追加スタイル
+@media (max-width: 768px) {
+  .demo-button-container {
+    max-width: 90%; /* 小さい画面でのコンテナの最大幅を90%に設定 */
+  }
+  .demo-button {
+    padding: 15px 30px; /* 小さい画面でのボタンの内側余白を調整 */
+  }
+  .demo-button-text {
+    font-size: 24px; /* 小さい画面でのテキストサイズを調整 */
+  }  
+  .demo-button-subtext {
+    font-size: 16px; /* 小さい画面でのサブテキストサイズを調整 */
+  }
+}

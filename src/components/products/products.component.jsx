@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import ComputersCanvas from '../canvas/Computers';
 import EarthCanvas from '../canvas/Earth';
 import PackmoneyCanvas from '../canvas/Pack_money';
@@ -74,11 +75,14 @@ const Products = () => {
       <div className="products-container">
         <h1 className="products-title">Services of MFTO</h1>
         <div className="product-showcase-wrapper">
-          {/* <div className="product-showcase">
-            <GMBigcityCanvas />
-          </div> */}
           <div className="products-main-visual">
             <img src={ProductImage} alt="MFTO Visual Representation" className="products-main-image" />
+            <div className="demo-button-container">
+              <Link to="#" className="demo-button">
+                <span className="demo-button-text">Sphere System</span>
+                <span className="demo-button-subtext">Demo</span>
+              </Link>
+            </div>
           </div>
         </div>
         {features.map((feature, index) => (
